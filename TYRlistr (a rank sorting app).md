@@ -1,4 +1,4 @@
-TYRlistr is an opinionated tier list builder app. it's interface consists of 6-rows that can be flipped between a shine and shade version. objects within the list should default to a graphic that expands into a list of details when double clicked. single click and drag should allow for moving them between rows.
+TYRlistr is an opinionated tier list builder app. its interface consists of 6-rows that can be flipped between a shine and shade version. objects within the list should default to a graphic that expands into a list of details when double clicked. single click and drag should allow for moving them between rows.
 
 #### target interface
 ---
@@ -22,7 +22,7 @@ SwiftUI app that saves a structured text file into a directory such as a GitHub 
 | WIZARD (A)  | steel on white           | navy-blue on black  | warlock (E)   |
 | PALADIN (B) | sky-blue on white        | brown on black      | barbarian (D) |
 | CLERIC (C)  | magenta on white         | lime-green on black | druid (R)     |
-| BARD (F)    | forest-green on black    | purple on black     | sorcerer (T)  |
+| BARD (F)    | forest-green on white    | purple on black     | sorcerer (T)  |
 | RANGER (Q)  | turquoise on white       | orange on black     | rogue (K)     |
 
 #### reasoning
@@ -34,7 +34,7 @@ SwiftUI app that saves a structured text file into a directory such as a GitHub 
 | S   | fighter's super-tier (most popular, most advertised as the best, highly hyped)                                                     | shade | 1     |
 | A   | wizard's advanced-tier (really good at many things with effort to study and learn)                                                 | shine | 2     |
 | E   | warlock's evil tier (sinister, terrible, frustrating, maybe useful if mastered, but not recommended)                               | shade | 2     |
-| B   | paladin basic tier (solid performer, easy to learn/use, but )                                                                      | shine | 3     |
+| B   | paladin basic tier (solid performer, easy to learn/use, but maybe a stubborn rule follower)                                        | shine | 3     |
 | D   | barbarian's defective-tier (broken, unreliable, inconsistent)                                                                      | shade | 3     |
 | C   | cleric's curable-tier (has problems that can be worked around)                                                                     | shine | 4     |
 | R   | druid's root-tier (original source, raw foundation, not optimized or polished)                                                     | shade | 4     |
@@ -74,21 +74,21 @@ swaps the interface to a summary about the TYRlist including : creator alias, fi
 | B   |     |     | D   |
 | C   |     |     | R   |
 | F   |     |     | T   |
-| K   |     |     | Q   |
+| Q   |     |     | K   |
 
 ##### middle (when UI is locked)
 <-
 scrolls the members of a row to the left (backward). stops at first row item.
 
 click a row-label
-swaps that row to it's inverse shine/shade
+swaps that row to its inverse shine/shade
 
 click a selected row-label
-- unselects it turning off the palette color boarder
+- unselects it turning off the palette color border
 - returns the full height visual of item list
 
 click an item
-- selects it adding a palette color boarder
+- selects it adding a palette color border
 - adds "open" over the existing item visual
 
 click a selected item
@@ -104,7 +104,7 @@ scrolls the members of a row to the right (forward). stops at last row item.
 moves a selected item to the left (decreasing rank order by one). defaults to moving the last added item. row-order is a required attribute of all list items. 1 being the top rank.
 
 click a row-label
-- selects all members of that row adding a palette color boarder around them.
+- selects all members of that row adding a palette color border around them.
 - adds an "open" button over the row-label
 
 click a selected row-label
@@ -113,12 +113,12 @@ click a selected row-label
 - potential modifications : thumbnail, tier name, description (of what it is), explanation (for what belongs in it), background color, accent color
 
 click an item
-- selects it adding a palette color boarder
+- selects it adding a palette color border
 - adds "open" over the existing item visual
 
 click a selected item
 - opens the item's form in modify-mode
-- secondary top navigation buttons : back (to TYRlist UI), lock (item settings so that it can't be accidentally moved into other tiers or have it's rank changed), delete (confirmation dialog to delete item)
+- secondary top navigation buttons : back (to TYRlist UI), lock (item settings so that it can't be accidentally moved into other tiers or have its rank changed), delete (confirmation dialog to delete item)
 
 ->
 moves a selected item to the right (increasing rank order by one). defaults to selecting the last added item.
@@ -128,7 +128,7 @@ moves a selected item to the right (increasing rank order by one). defaults to s
 adds an item to the selected row defaulting to Q if none is active
 
 generate (when UI is locked)
-triggers an agent to help build a TYRlist on a given topic after some clarifying questions by using it's internal definition of what should be in each row/side.
+triggers an agent to help build a TYRlist on a given topic after some clarifying questions by using its internal definition of what should be in each row/side.
 
 generate (when UI is unlocked or on first-run)
 changes the UI to a settings form for configuring a preferred AI assistant (Gemini, ChatGPT, Claude, local models, etc.). i'm not sure how to implement this as i think it would take an agent that can write longer files that a free-prompt might not be able to handle. 
@@ -143,7 +143,7 @@ feedback
 goes to an input form of some sort. buglist in Github maybe? email seems lame, but could work.
 
 source
-directs to the github repo that that app can be installed from
+directs to the github repo that the app can be installed from
 
 -
 triggers a yes/no confirmation to delete all the items in a row or a specific selected item. default without anything selected asks if you want to delete all the items in the TYRlist or undo the last deletion event
