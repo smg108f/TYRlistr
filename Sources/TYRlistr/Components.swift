@@ -109,7 +109,7 @@ struct TierChip: View {
     var body: some View {
         HStack(spacing: 6) {
             Text(tier.rawValue).font(.headline.weight(.black))
-            Text(tier.archetype).font(.caption)
+            Text(tier.tierName).font(.caption)
         }
         .foregroundStyle(tier.textColor)
         .padding(.horizontal, 10).padding(.vertical, 4)
@@ -123,7 +123,7 @@ struct TierPicker: View {
     var body: some View {
         Picker("Tier", selection: $selection) {
             ForEach(TierKey.allCases) { t in
-                Text("\(t.rawValue) — \(t.fullName)").tag(t)
+                Text("\(t.shortLabel) — \(t.headline.lowercased())").tag(t)
             }
         }
     }

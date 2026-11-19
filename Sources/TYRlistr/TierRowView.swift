@@ -30,7 +30,7 @@ struct TierRowView: View {
                             }
                             .buttonStyle(.plain)
                             .padding(3)
-                            .help("Flip to \(tier.inverse.rawValue) (\(tier.inverse.archetype))")
+                            .help("Flip to \(tier.inverse.shortLabel)")
                         }
                     }
 

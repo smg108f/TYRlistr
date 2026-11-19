@@ -134,7 +134,7 @@ struct ContentView: View {
         if let id = store.selectedItem, let it = store.item(id) { return "Delete \(it.title)?" }
         if let r = store.selectedRow {
             let t = store.tier(forRow: r)
-            return "Delete every item in \(t.rawValue) (\(t.fullName))?"
+            return "Delete every item in \(t.shortLabel)?"
         }
         return "Delete every item in this TYRlist?"
     }

@@ -39,7 +39,7 @@ struct TierItem: Identifiable, Codable, Hashable {
     static func blank(rank: Int) -> TierItem { TierItem(title: "", tier: .Q, rank: rank) }
 
     var summary: String {
-        var s = "\(displayGlyph) \(title) — \(tier.rawValue) (\(tier.fullName)), rank \(rank)"
+        var s = "\(displayGlyph) \(title) — \(tier.shortLabel), rank \(rank)"
         if !explanation.isEmpty { s += "\n\(explanation)" }
         for (k, v) in details.sorted(by: { $0.key < $1.key }) where !v.isEmpty { s += "\n\(k): \(v)" }
         return s
@@ -224,7 +224,7 @@ extension TYRList {
         s += "| TYR | tier | items |\n| --- | --- | --- |\n"
         for tier in TierKey.allCases {
             let names = items(in: tier).filter { !$0.isBlank }.map { "\($0.displayGlyph) \($0.title)".replacingOccurrences(of: "|", with: "\\|") }
-            s += "| \(tier.rawValue) | \(tier.fullName) | \(names.joined(separator: ", ")) |\n"
+            s += "| \(tier.rawValue) | \(tier.tierName) | \(names.joined(separator: ", ")) |\n"
         }
         return s
     }

@@ -1,27 +1,27 @@
 # 🥚 egg dishes
 
-an example list to test out the reasoning of different tiers and overall functionality of the app. 
+first TRYlist that i worked through with Claude Opus to negatiate through how i think about what should fit into a given tier. also tweaked various bits of the UI/UX throughout this testing. 
 
 | TYR | tier | items |
 | --- | --- | --- |
-| G | monk's god-tier | 🥚 Poached egg, ☁️ Meringue |
-| S | fighter's super-tier | 🔥 Shirred eggs, 🍅 Shakshuka |
-| A | wizard's advanced-tier | 🍮 Custard, 🥧 Quiche |
-| E | warlock's evil-tier | 🖤 Century egg, 🧟 Powdered eggs |
-| B | paladin's basic-tier | 🍣 Tamago nigiri, 🕵️ Hard-boiled egg |
-| D | barbarian's disgust-tier | 🥄 Raw egg, 🪲 Scotch egg |
-| C | cleric's cure-tier | 🫕 Omelette, 🥣 Egg drop soup |
-| R | druid's root-tier | 🍲 Scrambled eggs, 😈 Deviled eggs |
-| F | bard's funny-tier | 🟢 Green eggs and ham, 🌞 Sunny-side up, 🍞 Egg-in-a-hole |
-| T | sorcerer's trick-tier | 🍽️ Eggs Benedict, 🍳 Fried egg, 🥛 Eggnog |
-| Q | ranger's question-tier | 🐉 Dragon egg, 🪙 Golden egg |
-| K | rogue's knockoff-tier | 🧴 Egg substitute, 🐣 Easter egg |
+| G | god | 🥚 Poached egg, ☁️ Meringue |
+| S | super | 🔥 Shirred eggs, 🍅 Shakshuka |
+| A | advanced | 🍮 Custard, 🥧 Quiche |
+| E | evil | 🖤 Century egg, 🧟 Powdered eggs |
+| B | basic | 🍣 Tamago nigiri, 🕵️ Hard-boiled egg |
+| D | disgust | 🥄 Raw egg, 🪲 Scotch egg |
+| C | cure | 🫕 Omelette, 🥣 Egg drop soup |
+| R | root | 🍲 Scrambled eggs, 😈 Deviled eggs |
+| F | funny | 🟢 Green eggs and ham, 🌞 Sunny-side up, 🍞 Egg-in-a-hole |
+| T | trick | 🍽️ Eggs Benedict, 🍳 Fried egg, 🥛 Eggnog |
+| Q | question | 🐉 Dragon egg, 🪙 Golden egg |
+| K | knockoff | 🧴 Egg substitute, 🐣 Easter egg |
 
 ```json
 {
-  "created" : "2026-11-19T03:19:25Z",
+  "created" : "2026-11-19T03:33:20Z",
   "creator" : "smg108f",
-  "description" : "an example list to test out the reasoning of different tiers and overall functionality of the app. ",
+  "description" : "first TRYlist that i worked through with Claude Opus to negatiate through how i think about what should fit into a given tier. also tweaked various bits of the UI\/UX throughout this testing. ",
   "format" : "tyrlist\/0.1",
   "items" : [
     {
@@ -31,7 +31,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Hard and soft at once, the chaos egg. A true god could poach any animal's egg to perfect texture. Good luck with fish eggs.",
       "glyph" : "🥚",
-      "id" : "F3C866E7-718F-4E68-90C8-91EC61ABEBEC",
+      "id" : "72CD6DC6-8389-4F9F-977C-83AEBEFB45CC",
       "locked" : false,
       "rank" : 1,
       "tier" : "G",
@@ -44,7 +44,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "One technique, perfected. A speck of yolk ruins it, but follow the discipline and it comes out the same every time.",
       "glyph" : "☁️",
-      "id" : "377B911F-6944-4CB4-AB73-DC5316D40B11",
+      "id" : "0C39499E-BF4E-42C8-B2AB-692FB69104F9",
       "locked" : false,
       "rank" : 2,
       "tier" : "G",
@@ -57,7 +57,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Baked eggs: a trial by fire.",
       "glyph" : "🔥",
-      "id" : "DA18FB39-6860-4B65-926F-41A2B0639157",
+      "id" : "6EA38A88-9E93-4F37-BB67-A4B345C1CD5C",
       "locked" : false,
       "rank" : 1,
       "tier" : "S",
@@ -70,7 +70,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Fights its way into every ranking it can find.",
       "glyph" : "🍅",
-      "id" : "5498276E-EB80-43AF-A363-B08B70FAFFE3",
+      "id" : "14E75042-2006-41E4-8049-70365A48BC1D",
       "locked" : false,
       "rank" : 2,
       "tier" : "S",
@@ -83,7 +83,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Looks like alchemy.",
       "glyph" : "🍮",
-      "id" : "F56F8351-4BC5-4CAF-B608-5E752049FBBD",
+      "id" : "396C5FA9-03C7-4B98-B85C-F3CFB6E69F84",
       "locked" : false,
       "rank" : 1,
       "tier" : "A",
@@ -96,7 +96,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Pastry, custard and fillings: several skills that each take study.",
       "glyph" : "🥧",
-      "id" : "1494E655-9102-433F-986B-A6D0D793F29F",
+      "id" : "A682398E-F0DB-4739-A599-4579B97AFEBE",
       "locked" : false,
       "rank" : 2,
       "tier" : "A",
@@ -109,7 +109,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Looks sinister and divides people. Maybe rewarding once you acquire the taste, but not a first recommendation.",
       "glyph" : "🖤",
-      "id" : "1DEAEE61-8475-45E4-ABFF-B8AE29590F27",
+      "id" : "DD5FCA94-51A7-49AD-8C40-AE66ED46A3BB",
       "locked" : false,
       "rank" : 1,
       "tier" : "E",
@@ -122,7 +122,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Undead protein with years of shelf life.",
       "glyph" : "🧟",
-      "id" : "72CA1C3E-4F2C-4DC2-8620-5A322FCE117C",
+      "id" : "8652DA45-1F23-4A0B-B4DF-A66F3B93DBED",
       "locked" : false,
       "rank" : 2,
       "tier" : "E",
@@ -135,7 +135,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Discipline and working with others: assembled from three parts that can come from others' work.",
       "glyph" : "🍣",
-      "id" : "C598BAC8-CE8C-432D-8305-C08BEE4FC2A3",
+      "id" : "7B64F987-C0BC-436B-87F0-7F953706DE1A",
       "locked" : false,
       "rank" : 1,
       "tier" : "B",
@@ -148,7 +148,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "The hard-boiled detective.",
       "glyph" : "🕵️",
-      "id" : "935D3E72-1C52-4307-BEB4-589BC5B8C02C",
+      "id" : "C3019F79-EBDC-4A8C-953E-2386ADC38A37",
       "locked" : false,
       "rank" : 2,
       "tier" : "B",
@@ -161,7 +161,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Not really a dish, and the riskiest way to eat one.",
       "glyph" : "🥄",
-      "id" : "16FE27C8-289D-42B4-BE90-AB14C3F1B2CA",
+      "id" : "EC1C2ACD-A969-4D18-B61F-E30C4C68EB43",
       "locked" : false,
       "rank" : 1,
       "tier" : "D",
@@ -174,7 +174,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Cooks up looking like a dung-beetle ball.",
       "glyph" : "🪲",
-      "id" : "922DFE9F-DD58-4FDF-BDCB-9C6EC7FFF792",
+      "id" : "332A08ED-8033-4736-9D38-FD121CE1E552",
       "locked" : false,
       "rank" : 2,
       "tier" : "D",
@@ -187,7 +187,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Forgiving: clears out leftovers, and a botched fold still looks like a scramble once it's cut up.",
       "glyph" : "🫕",
-      "id" : "4238B9F4-CA45-4D8D-B906-3AA191290ACA",
+      "id" : "B23A659F-0C1F-40FD-A85C-482845D4C125",
       "locked" : false,
       "rank" : 1,
       "tier" : "C",
@@ -200,7 +200,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Forgiving and restorative.",
       "glyph" : "🥣",
-      "id" : "69BCBBFC-A353-4C3F-9A98-5226B42C5C1A",
+      "id" : "5E961D7C-EFF1-4759-A07B-27E54EBF5096",
       "locked" : false,
       "rank" : 2,
       "tier" : "C",
@@ -213,7 +213,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "The root of learning to cook: the first way anyone learns to prepare an egg.",
       "glyph" : "🍲",
-      "id" : "1D04593F-E61B-436F-A5FD-19FAADC31773",
+      "id" : "2997AAE5-67C4-468D-9BB8-C5A7A376BE6C",
       "locked" : false,
       "rank" : 1,
       "tier" : "R",
@@ -226,7 +226,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Sinister name, real effort, and a chance to slip in some poison if needs be.",
       "glyph" : "😈",
-      "id" : "2A62A96F-0499-43B6-9F68-B7F8EE56D9C1",
+      "id" : "D5594323-F4F2-4493-9928-B5663ADD1AAC",
       "locked" : false,
       "rank" : 2,
       "tier" : "R",
@@ -239,7 +239,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "A joke dish.",
       "glyph" : "🟢",
-      "id" : "43714687-5261-43EF-BCB4-F1EF621ABC35",
+      "id" : "EE4B395C-CA7F-42FA-91A3-09AC1AFE3A04",
       "locked" : false,
       "rank" : 1,
       "tier" : "F",
@@ -252,7 +252,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "How a jester feeds their kids.",
       "glyph" : "🌞",
-      "id" : "5129C278-ADA8-4C14-8EEF-D9781255823C",
+      "id" : "D29DB14B-3776-4604-B37A-44089AF4288A",
       "locked" : false,
       "rank" : 2,
       "tier" : "F",
@@ -265,7 +265,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "How a jester feeds their kids.",
       "glyph" : "🍞",
-      "id" : "F3A890DC-5B0C-4DC7-8D5E-F8E72A8C4391",
+      "id" : "2FAD934D-4E2E-4462-A3AA-99E4763689E0",
       "locked" : false,
       "rank" : 3,
       "tier" : "F",
@@ -278,7 +278,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Get the spell right or be burned at the stake: the priciest egg dish on the menu and rarely worth it.",
       "glyph" : "🍽️",
-      "id" : "02029623-9E54-4B93-A514-B7DB79EE4CBC",
+      "id" : "43C1D9F0-E999-4962-A0AE-1308B7735FB1",
       "locked" : false,
       "rank" : 1,
       "tier" : "T",
@@ -291,7 +291,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Same result whenever you can pull off the spell.",
       "glyph" : "🍳",
-      "id" : "D8BF5BEA-B817-48C7-A6CC-0C0833FF5295",
+      "id" : "46BB0461-803F-49EA-9ADC-DDDA6CB94BE4",
       "locked" : false,
       "rank" : 2,
       "tier" : "T",
@@ -304,7 +304,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Sweet milk that can get you drunk.",
       "glyph" : "🥛",
-      "id" : "169E906E-7348-4A88-9E5B-06068816988A",
+      "id" : "1F2B111B-5C7D-45A6-9372-0EB6D5007AD8",
       "locked" : false,
       "rank" : 3,
       "tier" : "T",
@@ -317,7 +317,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Impossible to evaluate. Lore says stone, metal or non-terran materials, hatched by magic.",
       "glyph" : "🐉",
-      "id" : "93ADBBE6-ACCD-46E7-8CAF-2B13E0AC3C99",
+      "id" : "744FDBF2-71B6-4A23-AD88-9B9F7C6769A0",
       "locked" : false,
       "rank" : 1,
       "tier" : "Q",
@@ -330,7 +330,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Mythic, and you can't eat gold.",
       "glyph" : "🪙",
-      "id" : "1CD7EB4E-73DD-404C-A3A7-88CD5E017482",
+      "id" : "835373A7-F0BC-48F6-8EDE-C9AE9398947A",
       "locked" : false,
       "rank" : 2,
       "tier" : "Q",
@@ -343,7 +343,7 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Not really an egg, but sort of functions like one.",
       "glyph" : "🧴",
-      "id" : "EC6C58E5-A1FD-4D22-84D8-2CA1EF6B76BE",
+      "id" : "DEC14722-D28C-4389-9281-8435085E2213",
       "locked" : false,
       "rank" : 1,
       "tier" : "K",
@@ -356,14 +356,14 @@ an example list to test out the reasoning of different tiers and overall functio
       "edits" : 0,
       "explanation" : "Plastic, chocolate or dyed: a stand-in for the real thing.",
       "glyph" : "🐣",
-      "id" : "759CC60E-3D87-4E9C-8244-C341412A135F",
+      "id" : "0AD48F20-8278-4FA8-BFEB-1E74074C6B49",
       "locked" : false,
       "rank" : 2,
       "tier" : "K",
       "title" : "Easter egg"
     }
   ],
-  "modified" : "2026-11-19T03:22:34Z",
+  "modified" : "2026-11-19T03:40:26Z",
   "name" : "egg dishes",
   "placeholders" : 18,
   "schema" : [

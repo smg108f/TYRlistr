@@ -57,21 +57,72 @@ enum TierKey: String, Codable, CaseIterable, Identifiable {
 
     var fullName: String { "\(archetype)'s \(tierName)-tier" }
 
-    /// Default explanation of what belongs here (from the design spec).
-    var blurb: String {
+    /// "G · god": how a tier is named anywhere a user sees it.
+    var shortLabel: String { "\(rawValue) · \(tierName)" }
+
+    // Plain-language guidance shown when a row label is opened.
+    // Archetypes and shine/shade stay in SPEC.md; users see only these.
+
+    var headline: String {
         switch self {
-        case .G: return "Perfected at one thing; probably challenging to get the most out of it."
-        case .S: return "Most popular, most advertised as the best, highly hyped."
-        case .A: return "Really good at many things, with effort to study and learn."
-        case .E: return "Sinister, terrible, frustrating. Maybe useful if mastered, but not recommended."
-        case .B: return "Solid performer, easy to learn and use, but maybe a stubborn rule follower."
-        case .D: return "Crude and hard to stomach: broken, unreliable, or just gross."
-        case .C: return "Has problems that can be worked around; forgiving when things go wrong."
-        case .R: return "Original source, raw foundation, not optimized or polished."
-        case .F: return "Parodies and jokes."
-        case .T: return "Easy to use maybe, but a one-trick pony, and the trick might be a random result that often disappoints."
-        case .Q: return "Unknown, to be determined."
-        case .K: return "A non-original variant that doesn't add anything important."
+        case .G: return "Mastered one thing"
+        case .S: return "The famous one"
+        case .A: return "Rewards study"
+        case .E: return "Not recommended"
+        case .B: return "Solid and dependable"
+        case .D: return "Hard to stomach"
+        case .C: return "Forgiving"
+        case .R: return "Where it all starts"
+        case .F: return "A joke"
+        case .T: return "All or nothing"
+        case .Q: return "Can't say yet"
+        case .K: return "A stand-in"
+        }
+    }
+
+    var belongsHere: String {
+        switch self {
+        case .G: return "Hard to get right and easy to miss, but repeatable by anyone with the discipline to do it exactly the same way every time."
+        case .S: return "The most popular, most advertised, most hyped choice. It has to keep fighting to prove it deserves the attention."
+        case .A: return "Good at many things once you've learned how. It combines several skills, and from the outside it can look like alchemy."
+        case .E: return "Sinister, frustrating or off-putting. It might pay off for someone who masters it, but you wouldn't suggest it to a friend."
+        case .B: return "Easy to learn, does what it says and works well with others. It may be a bit of a stickler for the rules."
+        case .D: return "Crude, broken, unreliable or just gross."
+        case .C: return "It has flaws, but they can be worked around, and it holds up when things go wrong."
+        case .R: return "The original, or the first version everyone learns. Raw and unpolished, and sometimes there's more to it than it seems."
+        case .F: return "Parodies, gags and things nobody takes seriously."
+        case .T: return "Works like a spell: when everything goes exactly right it's impressive, and when anything misses it falls apart. Sometimes a one-trick pony."
+        case .Q: return "Unknown, untried or impossible to judge. New blank slots wait here until they're filled in."
+        case .K: return "A copy or variant that doesn't add anything important. It works like the real thing without being it."
+        }
+    }
+
+    var askYourself: String {
+        switch self {
+        case .G: return "Does it reward exact, patient practice at a single thing?"
+        case .S: return "Is it known mostly for being known?"
+        case .A: return "Does it get better the more you learn about it?"
+        case .E: return "Would you warn someone before they tried it?"
+        case .B: return "Could you hand it to anyone and trust the result?"
+        case .D: return "Is your first reaction to recoil?"
+        case .C: return "If you mess it up, is it still fine?"
+        case .R: return "Is this where most people begin?"
+        case .F: return "Does it exist mostly to make people smile?"
+        case .T: return "Does it only work if everything goes right at once?"
+        case .Q: return "Do you actually know enough to place it?"
+        case .K: return "Is it imitating something better?"
+        }
+    }
+
+    /// Common misplacements, when there is a known one.
+    var watchOut: String? {
+        switch self {
+        case .G: return "Hard and hyped is super. Hard because it combines many skills is advanced."
+        case .S: return "Being difficult doesn't make something super. Popularity does."
+        case .D: return "Judge a thing on its own terms, not as the failed version of something else."
+        case .T: return "If it's still fine when it misses, it belongs in cure."
+        case .K: return "If the list isn't about the original, fold the variant into it instead of listing both."
+        default: return nil
         }
     }
 

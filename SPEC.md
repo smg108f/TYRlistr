@@ -37,6 +37,25 @@ Rows are ordered top to bottom; within a row, shine is the default side.
 
 Shine rows have a white background; shade rows have a black background. Label text is black or white, whichever reads better on the tier color.
 
+### What users see
+
+Archetypes and shine/shade are the design model; the app never shows them. Opening a row label shows the tier's letter and name, a headline, what belongs there, a question to ask yourself, a common misplacement where there is one, and the opposite tier on the same row.
+
+| key | headline | ask yourself |
+| --- | -------- | ------------ |
+| G | Mastered one thing | Does it reward exact, patient practice at a single thing? |
+| S | The famous one | Is it known mostly for being known? |
+| A | Rewards study | Does it get better the more you learn about it? |
+| E | Not recommended | Would you warn someone before they tried it? |
+| B | Solid and dependable | Could you hand it to anyone and trust the result? |
+| D | Hard to stomach | Is your first reaction to recoil? |
+| C | Forgiving | If you mess it up, is it still fine? |
+| R | Where it all starts | Is this where most people begin? |
+| F | A joke | Does it exist mostly to make people smile? |
+| T | All or nothing | Does it only work if everything goes right at once? |
+| Q | Can't say yet | Do you actually know enough to place it? |
+| K | A stand-in | Is it imitating something better? |
+
 ### Anchor examples (list topic: egg dishes)
 
 | key | items | the story |
@@ -104,7 +123,7 @@ Row labels show the tier letter with the tier name underneath (god, advanced, ba
 - **open / save**: read and write the file format above.
 - **edit**: changes the list's settings.
 - **export**: `.md`, `.html` or `.png`. Blank placeholders are left out.
-- **stats**: swaps the rows for a summary: creator, firstseen, last-mod, total edits, description, filled/blank/placeholder counts, archetypes recognized (out of 12), and item counts per tier laid out as shine | count | count | shade.
+- **stats**: swaps the rows for a summary: creator, firstseen, last-mod, total edits, description, filled/blank/placeholder counts, tiers filled (out of 12), and item counts per tier laid out as shine | count | count | shade.
 
 ### Rows, locked mode
 - `<` / `>` scroll the row.

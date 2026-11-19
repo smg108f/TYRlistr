@@ -53,20 +53,20 @@ struct ItemDetailView: View {
                 Text(draft.displayGlyph).font(.system(size: 44))
                 VStack(alignment: .leading, spacing: 2) {
                     Text(draft.isBlank ? "blank placeholder" : draft.title).font(.title2.bold())
-                    Text("\(draft.tier.rawValue) · \(draft.tier.fullName) · rank \(draft.rank) · \(draft.edits) edits")
+                    Text("\(draft.tier.shortLabel) · rank \(draft.rank) · \(draft.edits) edits")
                         .font(.caption).foregroundStyle(.secondary)
                 }
             }
 
             Form {
                 TextField("Name", text: $draft.title)
+                ForEach(store.list.schema, id: \.self) { key in
+                    TextField(key, text: detailBinding(key), axis: .vertical).lineLimit(1...6)
+                }
                 TextField("Graphic (emoji or letters)", text: $draft.glyph)
                 TierPicker(selection: $draft.tier).disabled(draft.locked)
                 TextField("Explanation (why this tier)", text: $draft.explanation, axis: .vertical)
                     .lineLimit(2...6)
-                ForEach(store.list.schema, id: \.self) { key in
-                    TextField(key, text: detailBinding(key), axis: .vertical).lineLimit(1...6)
-                }
             }
             .formStyle(.grouped)
             .disabled(!editable)
@@ -149,18 +149,31 @@ struct TierInfoView: View {
             HStack(spacing: 14) {
                 TierLabel(tier: tier)
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(tier.fullName).font(.title2.bold())
-                    Text("\(tier.side.rawValue) · row \(tier.row + 1) · opposite of \(tier.inverse.rawValue) (\(tier.inverse.archetype))")
-                        .foregroundStyle(.secondary)
+                    Text(tier.shortLabel).font(.title2.bold())
+                    Text(tier.headline).font(.title3).foregroundStyle(.secondary)
                 }
             }
-            Text(tier.blurb)
-            Text("Customizing tier names, colors and explanations comes in a later version.")
-                .font(.footnote).foregroundStyle(.secondary)
+            Text(tier.belongsHere)
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Ask yourself").font(.caption.weight(.semibold)).foregroundStyle(.secondary)
+                Text(tier.askYourself).italic()
+            }
+            if let note = tier.watchOut {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Watch out").font(.caption.weight(.semibold)).foregroundStyle(.secondary)
+                    Text(note)
+                }
+            }
+            Divider()
+            HStack(spacing: 10) {
+                TierChip(tier: tier.inverse)
+                Text("Flip this row to see its opposite: \(tier.inverse.headline.lowercased()).")
+                    .foregroundStyle(.secondary)
+            }
             Spacer()
         }
         .padding(24)
-        .frame(minWidth: 460, minHeight: 300)
+        .frame(minWidth: 480, minHeight: 380)
     }
 }
 
@@ -254,7 +267,7 @@ struct StatsView: View {
                     statRow("firstseen", TYRList.displayDate(l.created))
                     statRow("last-mod", TYRList.displayDate(l.modified))
                     statRow("edits", "\(l.items.reduce(0) { $0 + $1.edits })")
-                    statRow("archetypes", archetypeSummary(l))
+                    statRow("tiers", archetypeSummary(l))
                     statRow("items", "\(l.filledCount) filled · \(l.blankCount) blank · \(l.placeholders) placeholders")
                 }
 
@@ -279,7 +292,7 @@ struct StatsView: View {
     private func archetypeSummary(_ l: TYRList) -> String {
         let found = l.recognizedTiers
         let missing = TierKey.allCases.filter { !found.contains($0) }
-        var s = "\(found.count) of 12 recognized"
+        var s = "\(found.count) of 12 filled"
         if !missing.isEmpty { s += " · missing " + missing.map(\.rawValue).joined(separator: ", ") }
         return s
     }
