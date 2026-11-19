@@ -21,8 +21,8 @@ SwiftUI app that saves a structured text file into a directory such as a GitHub 
 | MONK (G)    | imperial yellow on white | crimson on black    | fighter (S)   |
 | WIZARD (A)  | steel on white           | navy-blue on black  | warlock (E)   |
 | PALADIN (B) | sky-blue on white        | brown on black      | barbarian (D) |
-| CLERIC (C)  | magenta on white         | lime-green on black | druid (R)     |
-| BARD (F)    | forest-green on white    | purple on black     | sorcerer (T)  |
+| CLERIC (C)  | magenta on white         | forest-green on black | druid (R)     |
+| BARD (F)    | lime-green on white      | purple on black     | sorcerer (T)  |
 | RANGER (Q)  | turquoise on white       | orange on black     | rogue (K)     |
 
 #### reasoning
@@ -36,7 +36,7 @@ SwiftUI app that saves a structured text file into a directory such as a GitHub 
 | E   | warlock's evil tier (sinister, terrible, frustrating, maybe useful if mastered, but not recommended)                               | shade | 2     |
 | B   | paladin basic tier (solid performer, easy to learn/use, but maybe a stubborn rule follower)                                        | shine | 3     |
 | D   | barbarian's defective-tier (broken, unreliable, inconsistent)                                                                      | shade | 3     |
-| C   | cleric's curable-tier (has problems that can be worked around)                                                                     | shine | 4     |
+| C   | cleric's curable-tier (has problems that can be worked around, forgiving)                                                                     | shine | 4     |
 | R   | druid's root-tier (original source, raw foundation, not optimized or polished)                                                     | shade | 4     |
 | F   | bard's folly-tier (parodies, jokes)                                                                                                | shine | 5     |
 | T   | sorcerer's trick-tier (easy to use maybe, but kind of a one-trick pony, trick might also be a random result that sucks frequently) | shade | 5     |
@@ -50,7 +50,7 @@ lock
 a button to lock/unlock the list for ease of finger scrolling through a completed TYRlist
 
 new
-creates a new TYRlist with a name, description, thumbnail, set number of placeholders (12,18, 36, 54, 64, 108), schema for list (i.e. attributes that each of the placeholders will have)
+creates a new TYRlist with a name, description, thumbnail, set number of placeholders (12, 18, 36, 54, 64, 88, 108) created as blank items in Q,, schema for list (i.e. attributes that each of the placeholders will have)
 
 open
 opens an existing TYRlist saved file
