@@ -53,10 +53,10 @@ struct ContentView: View {
                       defaultFilename: exportName) { result in
             if case .failure(let error) = result { errorMessage = error.localizedDescription }
         }
-        .alert("Generate", isPresented: $showGenerate) {
+        .alert("Prompt copied", isPresented: $showGenerate) {
             Button("OK") {}
         } message: {
-            Text("AI-assisted list building is planned for a later version. For now, add items with +.")
+            Text("A prompt for building \u{201C}\(store.list.name)\u{201D} is on your clipboard. Paste it into any AI assistant, save its reply as a .md file, then use open to load it.")
         }
         .alert("Something went wrong", isPresented: Binding(get: { errorMessage != nil },
                                                              set: { if !$0 { errorMessage = nil } })) {
@@ -105,7 +105,10 @@ struct ContentView: View {
     private var bottomBar: some View {
         HStack(spacing: 0) {
             BarButton("add", "plus") { activeSheet = .addItem(addTarget) }
-            BarButton("generate", "sparkles") { showGenerate = true }
+            BarButton("generate", "sparkles") {
+                copyToClipboard(store.list.generatePrompt())
+                showGenerate = true
+            }
             BarButton("donate", "cup.and.saucer") { openURL(Links.donate) }
             BarButton("examples", "books.vertical") { openURL(Links.examples) }
             BarButton("feedback", "bubble.left") { openURL(Links.feedback) }

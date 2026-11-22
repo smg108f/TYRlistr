@@ -76,7 +76,7 @@ Archetypes and shine/shade are the design model; the app never shows them. Openi
 
 ## 4. Classification procedure
 
-For a person or an AI building a list (the planned *generate* feature):
+For a person or an AI building a list (the *generate* feature):
 
 1. **Fix the scope.** State the topic and the level of detail.
 2. **Gather candidates** at that level. Merge variants into their parent (principle 1).
@@ -161,7 +161,7 @@ Row labels show the tier letter with the tier name underneath (god, advanced, ba
 
 ### Bottom bar
 - **+**: add an item to the selected row's tier, or to Q if nothing is selected.
-- **generate**: build a list with an AI assistant using the procedure in section 4. Configuring the assistant (Claude, ChatGPT, Gemini, local models) is unresolved.
+- **generate**: build a list with an AI assistant using the procedure in section 4. In v0.2 it copies a prompt to the clipboard (the list's topic, size, schema and placed items, the tier guidance, this procedure and the file format); the person pastes it into any assistant, saves the reply as `.md` and opens it. Connecting to an assistant directly (Claude, ChatGPT, Gemini, local models) is unresolved.
 - **donate**: https://buymeacoffee.com/smg108f
 - **examples**: the repo's `examples` directory.
 - **feedback**: GitHub issues.
@@ -172,7 +172,9 @@ Row labels show the tier letter with the tier name underneath (god, advanced, ba
 
 **Built in v0.1:** everything in section 6 except generate and tier customization.
 
+**v0.2:** generate copies a prompt to the clipboard; first installable macOS build (ad-hoc signed DMG from `scripts/package-macos.sh`); code licensed AGPL-3.0-or-later, writing and examples CC BY-NC-SA 4.0.
+
 **Open questions:**
-- How generate connects to an AI provider.
+- How generate connects to an AI provider directly.
 - Tier customization: name, description, explanation, colors, with a reset to default.
-- Platform: v0.1 runs on macOS; iOS/iPadOS needs an app project.
+- Platform: v0.2 ships for macOS; iOS/iPadOS needs an app project.

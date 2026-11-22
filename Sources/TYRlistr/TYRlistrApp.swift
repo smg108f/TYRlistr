@@ -8,9 +8,12 @@ struct TYRlistrApp: App {
     init() {
         #if os(macOS)
         // Running from `swift run` starts as a background process; promote it to a normal app window.
-        DispatchQueue.main.async {
-            NSApplication.shared.setActivationPolicy(.regular)
-            NSApplication.shared.activate(ignoringOtherApps: true)
+        // A packaged .app (see scripts/package-macos.sh) already launches as a regular app.
+        if Bundle.main.bundleURL.pathExtension != "app" {
+            DispatchQueue.main.async {
+                NSApplication.shared.setActivationPolicy(.regular)
+                NSApplication.shared.activate(ignoringOtherApps: true)
+            }
         }
         #endif
     }
