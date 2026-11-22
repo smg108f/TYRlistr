@@ -110,7 +110,7 @@ struct TYRList: Codable {
         return stem.isEmpty ? "tyrlist" : stem
     }
 
-    /// Sean's preferred date style: 1YYYY.MM.DD (Holocene-style year), plus 24h time.
+    /// smg108f's preferred date style: 1YYYY.MM.DD (Holocene-style year), plus 24h time.
     static func displayDate(_ date: Date, withTime: Bool = true) -> String {
         let c = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
         var s = String(format: "1%04d.%02d.%02d", c.year ?? 0, c.month ?? 0, c.day ?? 0)
